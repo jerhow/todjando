@@ -6,4 +6,5 @@ def home(request):
     return render(request, 'home.html', {})
 
 def about(request):
-    return render(request, 'about.html', {})
+    context = {'fname': 'Jerry', 'lname': 'Howard'}
+    return render(request, 'about.html', context)
