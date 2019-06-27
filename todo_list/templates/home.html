@@ -5,11 +5,15 @@
 {% block content %}
 
     {% if all_items %}
-    <ul>
+    <table class="table table-bordered">
         {% for i in all_items %}
-            <li>{{ i.item }} | {{ i.completed }}</li>
+            <tr {% if i.completed %}class="table-secondary"{% endif %}>
+                    <td>{{ i.item }}</td>
+                    <td><center>{{ i.completed }}</center></td>
+                    <td><center>Delete</center></td>
+                </tr>
         {% endfor %}
-    </ul>
+    </table>
     {% endif %}
 
 
