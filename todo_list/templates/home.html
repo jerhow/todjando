@@ -3,5 +3,14 @@
 {% block title %}Todjando{% endblock %}
 
 {% block content %}
-<h1>Hello World!</h1>
+
+    {% if all_items %}
+    <ul>
+        {% for i in all_items %}
+            <li>{{ i.item }} | {{ i.completed }}</li>
+        {% endfor %}
+    </ul>
+    {% endif %}
+
+
 {% endblock %}
