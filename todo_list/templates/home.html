@@ -8,7 +8,7 @@
     <table class="table table-bordered">
         {% for i in all_items %}
             <tr {% if i.completed %}class="table-secondary"{% endif %}>
-                    <td>{{ i.item }}</td>
+                    <td {% if i.completed %}class="striker"{% endif %}>{{ i.item }}</td>
                     <td><center>{{ i.completed }}</center></td>
                     <td><center>Delete</center></td>
                 </tr>
