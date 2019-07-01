@@ -18,7 +18,7 @@ def home(request):
     return render(request, 'home.html', {'all_items': all_items})
 
 def about(request):
-    context = {'fname': 'Jerry', 'lname': 'Howard'}
+    context = {}
     return render(request, 'about.html', context)
 
 def delete(request, list_id):
